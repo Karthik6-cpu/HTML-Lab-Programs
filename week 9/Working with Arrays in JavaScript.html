@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Operations</title>
+</head>
+<body>
+    <h2>Array Operations</h2>
+    <div id="arrayResult"></div>
+
+    <script>
+        let subjects = ["Java", "Python", "DBMS"];
+
+        subjects.push("JavaScript");
+
+        let output = "";
+
+        output += "Subjects: " +
+                  subjects.join(", ") + "<br>";
+
+        output += "Total Subjects: " +
+                  subjects.length + "<br>";
+
+        output += "First Subject: " +
+                  subjects[0] + "<br><br>";
+
+        let values = [12, 18, 25, 10, 35];
+        let total = 0;
+        let largest = values[0];
+
+        for (let value of values) {
+            total += value;
+
+            if (value > largest) {
+                largest = value;
+            }
+        }
+
+        output += "Numbers: " + values.join(", ") + "<br>";
+        output += "Total Sum: " + total + "<br>";
+        output += "Largest Number: " + largest + "<br>";
+
+        subjects.pop();
+
+        output += "<br>After Removing Last Subject: " +
+                  subjects.join(", ");
+
+        document.getElementById("arrayResult").innerHTML =
+            output;
+    </script>
+</body>
+</html>
