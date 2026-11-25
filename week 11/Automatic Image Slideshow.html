@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Slideshow</title>
+</head>
+<body>
+    <h2>Automatic Image Slideshow</h2>
+    <img id="slide" src="image1.jpg" width="300" height="200">
+
+    <script>
+        let images = [
+            "image1.jpg",
+            "image2.jpg",
+            "image3.jpg"
+        ];
+        let index = 0;
+
+        function changeImage() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            document.getElementById("slide").src = images[index];
+        }
+
+        setInterval(changeImage, 2000);
+    </script>
+</body>
+</html>

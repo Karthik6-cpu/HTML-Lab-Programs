@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Animation</title>
+</head>
+<body>
+    <h2>Moving Image Animation</h2>
+    <img id="myImage" src="car.png" width="100" style="position:absolute; left:0px;">
+    <br><br><br><br><br>
+    <button onclick="moveImage()">Start Animation</button>
+
+    <script>
+        function moveImage() {
+            let image = document.getElementById("myImage");
+            let position = 0;
+            let animation = setInterval(function() {
+                if (position >= 500) {
+                    clearInterval(animation);
+                } else {
+                    position += 5;
+                    image.style.left = position + "px";
+                }
+            }, 50);
+        }
+    </script>
+</body>
+</html>

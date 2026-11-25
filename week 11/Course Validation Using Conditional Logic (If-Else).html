@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Selection Check</title>
+</head>
+<body>
+    <h2>Course Selection</h2>
+    <select id="course">
+        <option value="BCA">BCA</option>
+        <option value="MCA">MCA</option>
+    </select>
+    <button onclick="checkCourse()">Check</button>
+
+    <script>
+        function checkCourse() {
+            let course = document.getElementById("course").value;
+            if (course == "BCA") {
+                alert("You selected Bachelor of Computer Applications");
+            } else {
+                alert("You selected Master of Computer Applications");
+            }
+        }
+    </script>
+</body>
+</html>

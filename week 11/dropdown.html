@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection Alert</title>
+</head>
+<body>
+
+    <h2>Select a Subject</h2>
+
+    <select id="subjectSelect">
+        <option value="MFAI">MFAI</option>
+        <option value="COAOS">COAOS</option>
+        <option value="WT">WT</option>
+        <option value="DS">DS</option>
+        <option value="SE">SE</option>
+    </select>
+
+    <button onclick="showSelectedCourse()">Show Selected Subject</button>
+
+    <script>
+        function showSelectedCourse() {
+            let selectedSubject = document.getElementById("subjectSelect").value;
+            alert("Selected Subject: " + selectedSubject);
+        }
+    </script>
+
+</body>
+</html>
